@@ -16,7 +16,7 @@ const server = http.createServer(app);
 
 // ============ MIDDLEWARE ============
 // app.use(helmet({ contentSecurityPolicy: false }));
-app.use(cors({ origin: process.env.CLIENT_URL || '*' }));
+app.use(cors({ origin: '*' }));
 app.use(morgan('dev'));
 app.use(express.json({ limit: '5mb' }));
 app.use(express.urlencoded({ extended: true }));
